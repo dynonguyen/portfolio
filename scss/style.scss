@@ -1,0 +1,46 @@
+$nav-height: 8.4rem;
+
+// ----------- navigation -------------
+nav {
+  height: $nav-height;
+  background-color: var(--bg-color-sec);
+  box-shadow: var(--box-shadow);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-link {
+  font-size: 2rem;
+  margin: 0 1.2rem;
+
+  & i {
+    color: var(--bg-color-accent);
+    transition: all 0.35s ease;
+    &:hover,
+    &:active {
+      color: var(--primary-color);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    i {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.distance-nav {
+  margin-top: $nav-height;
+}
+
+.avatar {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+}
