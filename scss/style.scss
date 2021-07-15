@@ -1,5 +1,5 @@
 $nav-height: 8.4rem;
-$nav-width: 38rem;
+$nav-width: 42rem;
 $theme-size: 28px;
 @mixin transition {
   transition: all 0.3s ease;
@@ -87,7 +87,7 @@ $theme-size: 28px;
 .nav {
   display: none;
   height: 100vh;
-  width: 42rem;
+  width: $nav-width;
 
   position: fixed;
   left: 0;
@@ -145,9 +145,18 @@ $theme-size: 28px;
   }
 }
 
+// ----------- content wrap -------------
 .distance-nav {
   margin-top: $nav-height;
 }
+
+.content-wrap {
+  height: 100%;
+  position: relative;
+}
+
+// ----------- home section -------------
+
 // ----------- responsive -------------
 @media only screen and (min-width: 992px) {
   #mobileNav {

@@ -119,6 +119,11 @@
   margin-top: 8.4rem;
 }
 
+.content-wrap {
+  height: 100%;
+  position: relative;
+}
+
 @media only screen and (min-width: 992px) {
   #mobileNav {
     display: none;
@@ -130,7 +135,7 @@
 
   .distance-nav {
     margin-top: 0;
-    margin-left: 38rem;
+    margin-left: 42rem;
   }
 }
 
