@@ -5,6 +5,7 @@
   --text-color-sec: #959697;
   --primary-color: #018c4c;
   --secondary-color: #2ac07c;
+  --accent-color: #ca3600;
   --border-color: #e2e3e4;
 
   /* common */
@@ -20,6 +21,7 @@
   --text-color-sec: #bdbebf;
   --primary-color: #02b262;
   --secondary-color: #38d990;
+  --accent-color: #ff4703;
   --border-color: #525354;
 }
 

@@ -1,5 +1,47 @@
 $nav-height: 8.4rem;
 $nav-width: 38rem;
+$theme-size: 28px;
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+// ----------- theme button -------------
+
+.theme-btn-wrap {
+  width: $theme-size * 2.2;
+  height: $theme-size;
+
+  position: fixed;
+  left: $theme-size;
+  bottom: $theme-size;
+
+  border-radius: 25px;
+  border: solid 1px var(--border-color);
+  box-shadow: 0px 3px 8px 0px rgba(#000, 0.1);
+  background-color: var(--bg-color-main);
+
+  overflow: hidden;
+  transition: all 0.45s ease-in-out;
+}
+
+#themeBtn {
+  width: $theme-size - 2px;
+  height: $theme-size - 2px;
+  border-radius: 50%;
+  background-color: var(--text-color-sec);
+  @include transition;
+
+  &:hover,
+  &:active {
+    background-color: var(--text-color);
+  }
+}
+
+.theme-icon {
+  font-size: $theme-size / 1.8;
+  color: var(--primary-color);
+  padding: 0 6px;
+}
 
 // ----------- mobile navigation -------------
 #mobileNav {
@@ -16,8 +58,8 @@ $nav-width: 38rem;
     margin: 0 1.2rem;
 
     & i {
+      @include transition();
       color: var(--text-color-sec);
-      transition: all 0.35s ease;
       &:hover,
       &:active {
         color: var(--primary-color);
@@ -46,7 +88,7 @@ $nav-width: 38rem;
 .nav {
   display: none;
   height: 100vh;
-  width: 38rem;
+  width: 42rem;
 
   position: fixed;
   left: 0;
@@ -72,6 +114,8 @@ $nav-width: 38rem;
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .nav-fullname {
@@ -92,7 +136,7 @@ $nav-width: 38rem;
   font-size: 1.6rem;
   font-weight: 500;
   color: var(--text-color-sec);
-  transition: all ease 0.35s;
+  @include transition();
 
   &:hover,
   &:active {
@@ -105,7 +149,7 @@ $nav-width: 38rem;
   margin-top: $nav-height;
 }
 // ----------- responsive -------------
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 992px) {
   #mobileNav {
     display: none;
   }
