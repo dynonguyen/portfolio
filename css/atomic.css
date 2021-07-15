@@ -63,6 +63,10 @@
   display: flex;
 }
 
+.flex-dir-col {
+  flex-direction: column;
+}
+
 .flex-center {
   display: flex;
   align-items: center;
