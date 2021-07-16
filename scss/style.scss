@@ -159,10 +159,9 @@ section {
 }
 
 // ----------- home section -------------
-#home {
+.home {
   max-width: 90%;
   margin: 0 auto;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -255,7 +254,7 @@ section {
   }
 
   // ----------- home -------------
-  #home {
+  .home {
     flex-direction: row;
   }
 

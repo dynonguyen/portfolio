@@ -122,10 +122,9 @@ section {
   display: none;
 }
 
-#home {
+.home {
   max-width: 90%;
   margin: 0 auto;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -210,7 +209,7 @@ section {
     margin-left: 42rem;
   }
 
-  #home {
+  .home {
     flex-direction: row;
   }
 
