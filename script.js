@@ -1,7 +1,7 @@
 /// <reference path="D:\tips\typings\jquery\globals\jquery\index.d.ts" />
 
 const LS_THEME_KEY = 'theme';
-let currentLink = 'home';
+let currentLink = 'about';
 
 // get theme in local storage
 function getTheme() {
@@ -56,7 +56,7 @@ $(document).ready(function () {
 	});
 
 	// get home
-	getComponent('home');
+	getComponent(currentLink);
 
 	// link & render component
 	$('.nav-link').click(function () {

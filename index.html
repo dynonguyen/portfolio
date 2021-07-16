@@ -30,27 +30,28 @@
 
 	<body>
 		<!-- mobile navigation -->
-		<nav id="mobileNav" class="container-fluid flex-center-between">
-			<!-- avatar -->
-			<a href="/">
-				<img class="avatar" src="./assets/avt.jpg" alt="Avatar" />
-			</a>
-
-			<!-- navigation icons -->
-			<ul class="flex-center--ver">
-				<li class="nav-link active" data-link="home">
-					<i class="fas fa-home"></i>
-				</li>
-				<li class="nav-link" data-link="about">
-					<i class="fas fa-user-alt"></i>
-				</li>
-				<li class="nav-link" data-link="portfolio">
-					<i class="fas fa-briefcase"></i>
-				</li>
-				<li class="nav-link" data-link="contact">
-					<i class="fas fa-envelope"></i>
-				</li>
-			</ul>
+		<nav id="mobileNav">
+			<div class="nav-wrap container-fluid flex-center-between">
+				<!-- avatar -->
+				<a href="/">
+					<img class="avatar" src="./assets/avt.jpg" alt="Avatar" />
+				</a>
+				<!-- navigation icons -->
+				<ul class="flex-center--ver">
+					<li class="nav-link" data-link="home">
+						<i class="fas fa-home"></i>
+					</li>
+					<li class="nav-link" data-link="about">
+						<i class="fas fa-user-alt"></i>
+					</li>
+					<li class="nav-link" data-link="portfolio">
+						<i class="fas fa-briefcase"></i>
+					</li>
+					<li class="nav-link" data-link="contact">
+						<i class="fas fa-envelope"></i>
+					</li>
+				</ul>
+			</div>
 		</nav>
 
 		<!-- desktop navigation -->
@@ -59,7 +60,7 @@
 			<h2 class="nav-fullname">Nguyen Le Anh Tuan</h2>
 
 			<ul class="nav-menu">
-				<li class="nav-link active" data-link="home">Home</li>
+				<li class="nav-link" data-link="home">Home</li>
 				<li class="nav-link" data-link="about">About Me</li>
 				<li class="nav-link" data-link="portfolio">Portfolio</li>
 				<li class="nav-link" data-link="contact">Contact</li>
@@ -67,7 +68,7 @@
 		</nav>
 
 		<!-- main content -->
-		<div class="content-wrap distance-nav flex-center">
+		<div class="content-wrap flex-center">
 			<!-- Home -->
 			<section id="home">
 				<div class="d-flex home">
@@ -118,7 +119,74 @@
 			</section>
 
 			<!-- About me -->
-			<section id="about">About me</section>
+			<section id="about">
+				<div class="about">
+					<img
+						class="about-img"
+						src="./assets/intro-img.png"
+						alt="Avatar Photo"
+					/>
+
+					<h1 class="about-name">Nguyen Le Anh Tuan (Dyno Nguyen)</h1>
+
+					<div class="about-content">
+						<ul class="about-intro">
+							<li class="about-intro-item">
+								🤵 I'm a Computer Science and Engineering Student (Information
+								System) at the HCMUS.
+							</li>
+							<li class="about-intro-item">
+								👨‍💻 I’m currently working on web development technologies like
+								JavaScript, React, MERN Stack etc.
+							</li>
+							<li class="about-intro-item">
+								🎯 Future Goals: Learn more technologies Learning to become a
+								full-stack developer.
+							</li>
+							<li class="about-intro-item">
+								⚡ Fun fact: Open and friendly, I love to play guitar & code.
+							</li>
+						</ul>
+
+						<ul class="about-skill">
+							<li class="about-skill-item">
+								<p class="label">Programming Languages</p>
+								<p class="content">
+									JavaScript, TypeScript, C++ (I haven’t used C++ for a while).
+								</p>
+							</li>
+							<li class="about-skill-item">
+								<p class="label">Front-end Technologies</p>
+								<p class="content">
+									ReactJS, Next.js, HTML5, CSS3, Scss, Styled component, Redux,
+									Redux Saga, Jquery.
+								</p>
+							</li>
+							<li class="about-skill-item">
+								<p class="label">Back-end Technologies</p>
+								<p class="content">
+									NodeJS (ExpressJS), RESTful API, Pug Engine, MongoDB, MS SQL
+									Server.
+								</p>
+							</li>
+							<li class="about-skill-item">
+								<p class="label">Development Tools / Teamwork Tools</p>
+								<p class="content">
+									Git, Github, Github Project, Slack, Trello, VSCode, Cmd
+									Terminal, Notion.
+								</p>
+							</li>
+							<li class="about-skill-item">
+								<p class="label">Others</p>
+								<p class="content">
+									Basic design skill with Photoshop, Illustrator. Design SQL
+									Database.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 
 			<!-- Portfolio -->
 			<section id="portfolio">Portfolio</section>

@@ -44,13 +44,9 @@ $theme-size: 28px;
 
 // ----------- mobile navigation -------------
 #mobileNav {
-  height: $nav-height;
-  background-color: var(--bg-color-sec);
   box-shadow: var(--box-shadow);
-
-  position: fixed;
-  top: 0;
-  left: 0;
+  padding-bottom: $nav-height;
+  position: relative;
 
   .nav-link {
     font-size: 2rem;
@@ -81,6 +77,16 @@ $theme-size: 28px;
     width: 5.2rem;
     height: 5.2rem;
     border-radius: 50%;
+  }
+
+  .nav-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $nav-height;
+    background-color: var(--bg-color-sec);
+    width: 100%;
+    z-index: 9999;
   }
 }
 
@@ -145,13 +151,9 @@ $theme-size: 28px;
 }
 
 // ----------- content wrap -------------
-.distance-nav {
-  margin-top: $nav-height;
-}
 
 .content-wrap {
-  position: relative;
-  height: calc(100vh - #{$nav-height});
+  min-height: calc(100vh - #{$nav-height});
 }
 
 section {
@@ -196,7 +198,7 @@ section {
   text-transform: uppercase;
   font-weight: 800;
   color: var(--text-color);
-  font-size: 3.8rem;
+  font-size: 3.4rem;
   text-align: center;
 }
 
@@ -232,6 +234,61 @@ section {
   }
 }
 
+// ----------- about section -------------
+.about {
+  max-width: 800px;
+  margin: 1.6rem auto;
+  padding: 0 1.6rem;
+}
+
+.about-img {
+  width: 100%;
+  max-height: 40rem;
+  box-shadow: 0 0px 14px 0 rgba(#000, 0.15);
+  border-radius: 16px;
+  @include transition();
+  &:hover,
+  &:active {
+    border-radius: 0;
+  }
+}
+
+.about-name {
+  font-size: 2rem;
+  margin: 1.2rem 0;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1.2rem;
+}
+
+.about-intro-item,
+.about-skill-item * {
+  font-size: 1.6rem;
+  color: var(--text-color-sec);
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.about-intro-item {
+  margin-bottom: 1.2rem;
+}
+
+.about-skill-item {
+  margin-bottom: 1.2rem;
+  .label {
+    color: var(--text-color);
+    font-weight: 500;
+  }
+}
+
 // ----------- responsive -------------
 
 @media only screen and (min-width: 992px) {
@@ -245,12 +302,8 @@ section {
   }
 
   .content-wrap {
-    height: 100vh;
-  }
-
-  .distance-nav {
-    margin-top: 0;
     margin-left: $nav-width;
+    min-height: 100vh;
   }
 
   // ----------- home -------------
@@ -272,5 +325,16 @@ section {
     &-social {
       justify-content: flex-start;
     }
+  }
+
+  // ----------- about me -------------
+  .about-content {
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 1.6rem;
+  }
+
+  .about-intro-item,
+  .about-skill-item {
+    font-size: 1.5rem;
   }
 }

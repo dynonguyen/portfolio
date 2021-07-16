@@ -1,8 +1,8 @@
 :root {
   --bg-color-main: #f5f5f5;
   --bg-color-sec: #fff;
-  --text-color: #1c1c1c;
-  --text-color-sec: #959697;
+  --text-color: #2e2e2e;
+  --text-color-sec: #767778;
   --primary-color: #018c4c;
   --secondary-color: #2ac07c;
   --accent-color: #ca3600;
@@ -42,7 +42,8 @@ html {
 
 body {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: var(--bg-color-main);
   width: 100vw;
   height: 100vh;
