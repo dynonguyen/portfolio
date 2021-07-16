@@ -149,3 +149,59 @@
   top: 80%;
   transform: scale(0.3);
 }
+
+// ----------- avt shape animation -------------
+.ani-avt-shape {
+  -webkit-animation: avtShape 8.5s 1s infinite;
+  animation: avtShape 8.5s 1s infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes avtShape {
+  0% {
+    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+  }
+  20% {
+    border-radius: 60% 20% 30% 70%;
+  }
+  30% {
+    border-radius: 60% 40% 30% 70%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  70% {
+    border-radius: 60% 30% 70% 40%;
+  }
+  80% {
+    border-radius: 60% 40% 28% 72%/60% 20% 60% 40%;
+  }
+  100% {
+    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+  }
+}
+
+@keyframes avtShape {
+  0% {
+    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+  }
+  20% {
+    border-radius: 60% 20% 30% 70%;
+  }
+  40% {
+    border-radius: 60% 40% 30% 70%;
+  }
+  50% {
+    border-radius: 50%;
+  }
+  60% {
+    border-radius: 60% 30% 70% 40%;
+  }
+  80% {
+    border-radius: 60% 40% 28% 72%/60% 20% 60% 40%;
+  }
+  100% {
+    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+  }
+}

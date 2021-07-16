@@ -124,6 +124,31 @@
   position: relative;
 }
 
+.home {
+  max-width: 95%;
+}
+
+.home-avt {
+  width: 24rem;
+  height: 24rem;
+  overflow: hidden;
+  position: relative;
+}
+.home-avt-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/avt.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 8px rgba(133, 133, 133, 0.25);
+}
+
+.home-content {
+  margin-left: 2.4rem;
+}
+
 @media only screen and (min-width: 992px) {
   #mobileNav {
     display: none;
