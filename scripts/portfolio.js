@@ -124,6 +124,226 @@ const PROJECTS = [
 	},
 ];
 
+const PROJECTS_DETAILS = [
+	{
+		id: '0',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'https://picsum.photos/200/200',
+				isLink: true,
+			},
+		],
+	},
+	{
+		id: '1',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+	{
+		id: '2',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+	{
+		id: '3',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+	{
+		id: '4',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+	{
+		id: '5',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+	{
+		id: '6',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+	{
+		id: '7',
+		title: 'Dynonary - Website For Learning English',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+			},
+			{
+				label: 'Created',
+				content: '19-05-2020',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'ReactJS, MUI, JS',
+			},
+			{
+				label: 'Team size',
+				content: '5',
+			},
+			{
+				label: 'Link Demo:',
+				content: 'Frontend Dev, Leader',
+			},
+		],
+	},
+];
+
 let currentOptionKey = OPTIONS[0].key;
 
 function renderOptions() {
@@ -150,7 +370,7 @@ function renderProject(projects = []) {
 		<h2 class="project-name">${projectName}</h2>
 		<p class="project-tech">${projectTech}</p>
 		<div class="d-flex">
-			<a class="cur-pointer" ${DETAIL_KEY}="${id}">
+			<a class="cur-pointer show-detail" ${DETAIL_KEY}="${id}">
 				<i class="fas fa-info-circle project-icon"></i>
 			</a>
 			${
@@ -181,6 +401,43 @@ function renderProject(projects = []) {
 	});
 
 	$('#portfolioList').fadeOut().html(xml).fadeIn(350);
+	$('.show-detail').click(function () {
+		const id = $(this).attr(DETAIL_KEY);
+		showProjectDetailDialog(id);
+	});
+}
+
+function showProjectDetailDialog(id = '') {
+	if (!id || id === '') return;
+
+	const project = PROJECTS_DETAILS.find((i) => i.id === id);
+	if (!project) return;
+
+	const { contentList, title } = project;
+
+	let xml = '';
+	contentList.forEach((item) => {
+		xml += `<li class="dialog-content-item">
+	<span class="label">${item.label}:&nbsp;</span>
+	<span class="content">
+		${
+			item.isLink
+				? `<a href="${item.content}" target="_blank">${item.content}</a>`
+				: item.content
+		}
+	</span>
+</li>`;
+	});
+
+	$('#projectDialogTitle').text(title);
+	$('#projectDialogContent').html(xml);
+	$('#overlay').show(250);
+	$('#projectDialog').show(250);
+
+	$('#closeDialogBtn').click(() => {
+		$('#overlay').hide(350);
+		$('#projectDialog').hide(500);
+	});
 }
 
 $(document).ready(function () {
