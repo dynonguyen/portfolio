@@ -1,4 +1,71 @@
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+#projectDialog {
+  display: none;
+}
+
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+  max-width: 767px;
+  background-color: var(--bg-color-main);
+  border-radius: 6px;
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.dialog-header,
+.dialog-content {
+  padding: 1.2rem 2.4rem;
+}
+
+.dialog-title {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.dialog-header {
+  border-bottom: solid 1px var(--border-color);
+}
+.dialog-header i {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+.dialog-header i:hover, .dialog-header i:active {
+  transform: rotate(360deg);
+}
+
+.dialog-content-item {
+  margin: 1.4rem 0;
+}
+.dialog-content-item .label {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.dialog-content-item .content {
+  color: var(--text-color-sec);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
 .theme-btn-wrap {
+  z-index: 999;
   width: 61.6px;
   height: 28px;
   position: fixed;
@@ -124,7 +191,7 @@ section {
 }
 
 .home {
-  max-width: 90%;
+  max-width: 800px;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
@@ -245,7 +312,126 @@ section {
   font-weight: 500;
 }
 
-@media only screen and (min-width: 992px) {
+.portfolio {
+  max-width: 800px;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5rem 0.8rem;
+}
+.portfolio-label {
+  padding: 1.2rem 1.6rem;
+  width: 16rem;
+  background-color: var(--bg-color-sec);
+  text-align: center;
+  color: var(--text-color-sec);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: solid 1px var(--border-color);
+}
+.portfolio-header {
+  flex-direction: column;
+  margin: 2.4rem 0;
+}
+.portfolio-header .label {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+.portfolio-menu {
+  margin: 1.4rem -1.2rem;
+}
+.portfolio-menu li {
+  margin: 0 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color-sec);
+  transition: all 0.3s ease;
+}
+.portfolio-menu li.active, .portfolio-menu li:hover, .portfolio-menu li:active {
+  color: var(--text-color);
+  letter-spacing: 2px;
+}
+.portfolio-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3.2rem;
+}
+.portfolio-item {
+  width: 100%;
+  height: 350px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #222;
+  transition: all 0.5s;
+  opacity: 0;
+  z-index: 1;
+}
+.portfolio-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.portfolio-item:hover img, .portfolio-item:active img {
+  transform: scale(1.15);
+}
+.portfolio-item:hover::before, .portfolio-item:active::before {
+  opacity: 0.55;
+}
+.portfolio-item:hover .portfolio-item-detail, .portfolio-item:active .portfolio-item-detail {
+  opacity: 1;
+  visibility: visible;
+}
+.portfolio-item-detail {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.project-name {
+  font-size: 2.4rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+  letter-spacing: 0.75px;
+}
+.project-tech {
+  color: #fcfcfc;
+  font-size: 1.6rem;
+  margin: 1.8rem 0;
+}
+.project-icon {
+  font-size: 2.8rem;
+  color: #fcfcfc;
+  margin: 0 1.2rem;
+  transition: all 0.3s ease;
+}
+.project-icon:hover, .project-icon:active {
+  transform: scale(1.15);
+}
+
+@media only screen and (min-width: 1200px) {
   #mobileNav {
     display: none;
   }
@@ -282,6 +468,20 @@ section {
   .about-intro-item,
 .about-skill-item {
     font-size: 1.5rem;
+  }
+
+  .portfolio-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .portfolio-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 767px) {
+  .dialog {
+    min-width: 576px;
   }
 }
 

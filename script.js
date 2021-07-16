@@ -1,7 +1,7 @@
 /// <reference path="D:\tips\typings\jquery\globals\jquery\index.d.ts" />
 
 const LS_THEME_KEY = 'theme';
-let currentLink = 'about';
+let currentLink = 'portfolio';
 
 // get theme in local storage
 function getTheme() {

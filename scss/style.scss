@@ -1,12 +1,88 @@
 $nav-height: 8.4rem;
 $nav-width: 42rem;
 $theme-size: 28px;
+$max-width: 800px;
 @mixin transition {
   transition: all 0.3s ease;
 }
 
+// ----------- project detail dialog -------------
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+#projectDialog {
+  display: none;
+}
+
+.dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 350px;
+  max-width: 767px;
+  background-color: var(--bg-color-main);
+  border-radius: 6px;
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.4), 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+  z-index: 2;
+}
+
+.dialog-header,
+.dialog-content {
+  padding: 1.2rem 2.4rem;
+}
+
+.dialog-title {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.dialog-header {
+  border-bottom: solid 1px var(--border-color);
+
+  i {
+    font-size: 2.4rem;
+    color: var(--text-color);
+    @include transition();
+
+    &:hover,
+    &:active {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.dialog-content-item {
+  margin: 1.4rem 0;
+
+  .label {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .content {
+    color: var(--text-color-sec);
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+
 // ----------- theme button -------------
 .theme-btn-wrap {
+  z-index: 999;
   width: $theme-size * 2.2;
   height: $theme-size;
 
@@ -162,7 +238,7 @@ section {
 
 // ----------- home section -------------
 .home {
-  max-width: 90%;
+  max-width: $max-width;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
@@ -236,7 +312,7 @@ section {
 
 // ----------- about section -------------
 .about {
-  max-width: 800px;
+  max-width: $max-width;
   margin: 1.6rem auto;
   padding: 0 1.6rem;
 }
@@ -289,9 +365,159 @@ section {
   }
 }
 
+// ----------- portfolio -------------
+$portfolioItemTrans: all 0.5s;
+
+.portfolio {
+  max-width: $max-width;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 5rem 0.8rem;
+
+  &-label {
+    padding: 1.2rem 1.6rem;
+    width: 16rem;
+    background-color: var(--bg-color-sec);
+    text-align: center;
+    color: var(--text-color-sec);
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: solid 1px var(--border-color);
+  }
+
+  &-header {
+    flex-direction: column;
+    margin: 2.4rem 0;
+
+    .label {
+      font-size: 2.4rem;
+      color: var(--primary-color);
+    }
+  }
+
+  &-menu {
+    margin: 1.4rem -1.2rem;
+
+    li {
+      margin: 0 1.2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text-color-sec);
+      @include transition();
+
+      &.active,
+      &:hover,
+      &:active {
+        color: var(--text-color);
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3.2rem;
+  }
+
+  &-item {
+    width: 100%;
+    height: 350px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      transition: $portfolioItemTrans;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    img {
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      transition: $portfolioItemTrans;
+    }
+
+    &:hover,
+    &:active {
+      img {
+        transform: scale(1.15);
+      }
+
+      &::before {
+        opacity: 0.55;
+      }
+
+      & .portfolio-item-detail {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &-item-detail {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: $portfolioItemTrans;
+  }
+}
+
+.project {
+  &-name {
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    letter-spacing: 0.75px;
+  }
+
+  &-tech {
+    color: #fcfcfc;
+    font-size: 1.6rem;
+    margin: 1.8rem 0;
+  }
+
+  &-icon {
+    font-size: 2.8rem;
+    color: #fcfcfc;
+    margin: 0 1.2rem;
+
+    @include transition();
+    &:hover,
+    &:active {
+      transform: scale(1.15);
+    }
+  }
+}
+
 // ----------- responsive -------------
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   // ----------- navigation -------------
   #mobileNav {
     display: none;
@@ -336,5 +562,25 @@ section {
   .about-intro-item,
   .about-skill-item {
     font-size: 1.5rem;
+  }
+
+  // ----------- portfolio -------------
+  .portfolio {
+    &-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  // ----------- dialog -------------
+  .dialog {
+    min-width: 576px;
   }
 }
