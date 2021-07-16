@@ -1,0 +1,71 @@
+@import './variable.scss';
+
+// ----------- responsive -------------
+
+@media only screen and (min-width: 1200px) {
+  // ----------- navigation -------------
+  #mobileNav {
+    display: none;
+  }
+
+  #nav {
+    display: flex;
+  }
+
+  .content-wrap {
+    margin-left: $nav-width;
+    min-height: 100vh;
+  }
+
+  // ----------- home -------------
+  .home {
+    flex-direction: row;
+  }
+
+  .home {
+    &-avt {
+      margin-bottom: 0;
+      margin-right: 4.8rem;
+    }
+
+    &-intro,
+    &-name {
+      text-align: left;
+    }
+
+    &-social {
+      justify-content: flex-start;
+    }
+  }
+
+  // ----------- about me -------------
+  .about-content {
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 1.6rem;
+  }
+
+  .about-intro-item,
+  .about-skill-item {
+    font-size: 1.5rem;
+  }
+
+  // ----------- portfolio -------------
+  .portfolio {
+    &-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  // ----------- dialog -------------
+  .dialog {
+    min-width: 576px;
+  }
+}

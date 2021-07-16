@@ -20,37 +20,30 @@
 			crossorigin="anonymous"
 		></script>
 
+		<!-- favicon -->
+		<link rel="icon" type="image/png" href="./assets/favicon.png" />
+
 		<!-- global css -->
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/atomic.css" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/animation.css" />
-		<link rel="icon" type="image/png" href="./assets/favicon.png" />
+		<link rel="stylesheet" href="./css/navigation.css" />
+		<link rel="stylesheet" href="./css/theme-button.css" />
+		<link rel="stylesheet" href="./css/dialog.css" />
+		<link rel="stylesheet" href="./css/responsive.css" />
 	</head>
 
 	<body>
 		<!-- mobile navigation -->
 		<nav id="mobileNav">
-			<div class="nav-wrap container-fluid flex-center-between">
+			<div class="nav-wrap flex-center-between">
 				<!-- avatar -->
 				<a href="/">
 					<img class="avatar" src="./assets/avt.jpg" alt="Avatar" />
 				</a>
 				<!-- navigation icons -->
-				<ul class="flex-center--ver">
-					<li class="nav-link" data-link="home">
-						<i class="fas fa-home"></i>
-					</li>
-					<li class="nav-link" data-link="about">
-						<i class="fas fa-user-alt"></i>
-					</li>
-					<li class="nav-link" data-link="portfolio">
-						<i class="fas fa-briefcase"></i>
-					</li>
-					<li class="nav-link" data-link="contact">
-						<i class="fas fa-envelope"></i>
-					</li>
-				</ul>
+				<ul id="mobileNavLinks" class="flex-center--ver"></ul>
 			</div>
 		</nav>
 
@@ -59,13 +52,7 @@
 			<h1 class="nav-name">Dyno Nguyen</h1>
 			<h2 class="nav-fullname">Nguyen Le Anh Tuan</h2>
 
-			<ul class="nav-menu">
-				<li class="nav-link" data-link="home">Home</li>
-				<li class="nav-link" data-link="about">About Me</li>
-				<li class="nav-link" data-link="portfolio">Portfolio</li>
-				<li class="nav-link" data-link="contact">Contact</li>
-				<li class="nav-link" data-link="contact">My CV</li>
-			</ul>
+			<ul id="desktopNavLinks" class="nav-menu"></ul>
 		</nav>
 
 		<!-- main content -->
@@ -82,39 +69,7 @@
 							I'm a Front-end Web Developer. Familiar with HTML, CSS, JS,
 							ReactJS, MERN Stack, Design SQL DB.
 						</p>
-						<ul class="home-social d-flex">
-							<li class="social-item">
-								<a href="https://fb.com/TuanNguyen250400" target="_blank">
-									<i class="fab fa-facebook"></i>
-								</a>
-							</li>
-							<li class="social-item">
-								<a
-									href="https://www.instagram.com/_dyno.nguyen__/"
-									target="_blank"
-								>
-									<i class="fab fa-instagram-square"></i>
-								</a>
-							</li>
-							<li class="social-item">
-								<a href="https://github.com/TuanNguyen2504" target="_blank">
-									<i class="fab fa-github"></i>
-								</a>
-							</li>
-							<li class="social-item">
-								<a href="https://www.linkedin.com/in/nlatuan/" target="_blank">
-									<i class="fab fa-linkedin"></i>
-								</a>
-							</li>
-							<li class="social-item">
-								<a
-									href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=tuannguyentn2504@gmail.com"
-									target="_blank"
-								>
-									<i class="fas fa-envelope"></i>
-								</a>
-							</li>
-						</ul>
+						<ul id="socialNetwork" class="home-social d-flex"></ul>
 					</div>
 				</div>
 			</section>
@@ -127,58 +82,10 @@
 						src="./assets/intro-img.png"
 						alt="Avatar Photo"
 					/>
-
 					<h1 class="about-name">Nguyen Le Anh Tuan (Dyno Nguyen)</h1>
-
 					<div class="about-content">
-						<ul class="about-intro">
-							<li class="about-intro-item">
-								🤵 I'm a Computer Science and Engineering Student (Information
-								System) at the HCMUS.
-							</li>
-							<li class="about-intro-item">
-								👨‍💻 I’m currently working on web development technologies like
-								JavaScript, React, MERN Stack etc.
-							</li>
-							<li class="about-intro-item">
-								🎯 Future Goals: Learn more technologies Learning to become a
-								full-stack developer.
-							</li>
-							<li class="about-intro-item">
-								⚡ Fun fact: Open and friendly, I love to play guitar & code.
-							</li>
-						</ul>
-
-						<ul class="about-skill">
-							<li class="about-skill-item">
-								<p class="label">Front-end Technologies</p>
-								<p class="content">
-									ReactJS, Next.js, HTML5, CSS3, Scss, Styled component, Redux,
-									Redux Saga, Jquery.
-								</p>
-							</li>
-							<li class="about-skill-item">
-								<p class="label">Back-end Technologies</p>
-								<p class="content">
-									NodeJS (ExpressJS), RESTful API, Pug Engine, MongoDB, MS SQL
-									Server.
-								</p>
-							</li>
-							<li class="about-skill-item">
-								<p class="label">Development Tools / Teamwork Tools</p>
-								<p class="content">
-									Git, Github, Github Project, Slack, Trello, VSCode, Cmd
-									Terminal, Notion.
-								</p>
-							</li>
-							<li class="about-skill-item">
-								<p class="label">Others</p>
-								<p class="content">
-									Basic design skill with Photoshop, Illustrator. Design SQL
-									Database.
-								</p>
-							</li>
-						</ul>
+						<ul id="aboutIntro" class="about-intro"></ul>
+						<ul id="aboutSkill" class="about-skill"></ul>
 					</div>
 				</div>
 			</section>
@@ -188,14 +95,8 @@
 				<div class="portfolio">
 					<div class="portfolio-label">portfolio</div>
 					<div class="portfolio-header d-flex">
-						<h1 class="label">All Projects</h1>
-						<ul class="portfolio-menu d-flex">
-							<li class="active">All</li>
-							<li>Pet Projects</li>
-							<li>JS App</li>
-							<li>Static Website</li>
-							<li>C++</li>
-						</ul>
+						<h1 id="portfolioMenuLabel" class="label">All Projects</h1>
+						<ul id="portfolioMenu" class="portfolio-menu d-flex"></ul>
 					</div>
 					<ul class="portfolio-list">
 						<li class="portfolio-item">
@@ -303,7 +204,11 @@
 
 		<!-- script -->
 		<script src="./vendor/jquery.min.js"></script>
-		<script src="./script.js"></script>
+		<script src="./scripts/navigation.js"></script>
+		<script src="./scripts/theme.js"></script>
+		<script src="./scripts/home.js"></script>
+		<script src="./scripts/about.js"></script>
+		<script src="./scripts/portfolio.js"></script>
 	</body>
 
 	<!-- Reference: Template http://tokyovue.ibthemespro.com/ -->
