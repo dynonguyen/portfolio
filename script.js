@@ -5,10 +5,17 @@ const LS_THEME_KEY = 'theme';
 // get theme in local storage
 function getTheme() {
 	const theme = localStorage.getItem(LS_THEME_KEY);
+	const themeIcon = $('#themeIcon');
+	const themeWrap = $('#theme');
+
 	if (theme && theme === 'dark') {
 		$(':root').attr('data-theme', 'dark');
+		themeIcon.removeClass('fa-sun').addClass('fa-moon');
+		themeWrap.css('flex-direction', 'row-reverse');
 	} else {
 		$(':root').attr('data-theme', 'light');
+		themeIcon.removeClass('fa-moon').addClass('fa-sun');
+		themeWrap.css('flex-direction', 'row');
 	}
 }
 

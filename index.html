@@ -38,72 +38,92 @@
 
 			<!-- navigation icons -->
 			<ul class="flex-center--ver">
-				<li class="nav-link active">
-					<a href="#">
-						<i class="fas fa-home"></i>
-					</a>
+				<li class="nav-link active" data-link="home">
+					<i class="fas fa-home"></i>
 				</li>
-				<li class="nav-link">
-					<a href="#">
-						<i class="fas fa-user-alt"></i>
-					</a>
+				<li class="nav-link" data-link="about">
+					<i class="fas fa-user-alt"></i>
 				</li>
-				<li class="nav-link">
-					<a href="#">
-						<i class="fas fa-briefcase"></i>
-					</a>
+				<li class="nav-link" data-link="portfolio">
+					<i class="fas fa-briefcase"></i>
 				</li>
-				<li class="nav-link">
-					<a href="#">
-						<i class="fas fa-envelope"></i>
-					</a>
+				<li class="nav-link" data-link="contact">
+					<i class="fas fa-envelope"></i>
 				</li>
 			</ul>
 		</nav>
 
 		<!-- desktop navigation -->
-		<nav id="nav" class="nav flex-center flex-dir-col">
+		<nav id="nav" class="flex-center flex-dir-col">
 			<h1 class="nav-name">Dyno Nguyen</h1>
 			<h2 class="nav-fullname">Nguyen Le Anh Tuan</h2>
 
 			<ul class="nav-menu">
-				<li class="nav-menu-item">
-					<a href="#" class="nav-link">Home</a>
-				</li>
-				<li class="nav-menu-item">
-					<a href="#" class="nav-link">About Me</a>
-				</li>
-				<li class="nav-menu-item">
-					<a href="#" class="nav-link">Portfolio</a>
-				</li>
-				<li class="nav-menu-item">
-					<a href="#" class="nav-link">Contact</a>
-				</li>
+				<li class="nav-link active" data-link="home">Home</li>
+				<li class="nav-link" data-link="about">About Me</li>
+				<li class="nav-link" data-link="portfolio">Portfolio</li>
+				<li class="nav-link" data-link="contact">Contact</li>
 			</ul>
 		</nav>
 
 		<!-- main content -->
 		<div class="content-wrap distance-nav flex-center">
 			<!-- Home -->
-			<section class="home d-flex">
+			<section id="home">
 				<div class="home-avt">
 					<div class="home-avt-bg ani-avt-shape"></div>
 				</div>
 
-				<div class="home-content">
+				<div class="home-content d-flex flex-dir-col">
 					<h1 class="home-name">NGUYEN LE ANH TUAN</h1>
 					<p class="home-intro">
-						Front-end Web Developer. Familiar with React, ExpressJS (NodeJs),
-						MongoDB (MERN Stack), Design SQL DB.
+						I'm a Front-end Web Developer. Familiar with HTML, CSS, JS, ReactJS,
+						MERN Stack, Design SQL DB.
 					</p>
-					<ul class="home-social">
-						<li class="social-item"></li>
-						<li class="social-item"></li>
-						<li class="social-item"></li>
-						<li class="social-item"></li>
+					<ul class="home-social d-flex">
+						<li class="social-item">
+							<a href="https://fb.com/TuanNguyen250400" target="_blank">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a
+								href="https://www.instagram.com/_dyno.nguyen__/"
+								target="_blank"
+							>
+								<i class="fab fa-instagram-square"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="https://github.com/TuanNguyen2504" target="_blank">
+								<i class="fab fa-github"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a href="https://www.linkedin.com/in/nlatuan/" target="_blank">
+								<i class="fab fa-linkedin"></i>
+							</a>
+						</li>
+						<li class="social-item">
+							<a
+								href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=tuannguyentn2504@gmail.com"
+								target="_blank"
+							>
+								<i class="fas fa-envelope"></i>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</section>
+
+			<!-- About me -->
+			<section id="about">About me</section>
+
+			<!-- Portfolio -->
+			<section id="portfolio">Portfolio</section>
+
+			<!-- Contact -->
+			<section id="contact">Contact me</section>
 		</div>
 
 		<!-- theme btn -->
