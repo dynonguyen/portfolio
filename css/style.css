@@ -193,6 +193,7 @@ section {
   background-color: #222;
   transition: all 0.5s;
   opacity: 0;
+  visibility: hidden;
   z-index: 1;
 }
 .portfolio-item img {
@@ -206,6 +207,7 @@ section {
 }
 .portfolio-item:hover::before, .portfolio-item:active::before {
   opacity: 0.55;
+  visibility: visible;
 }
 .portfolio-item:hover .portfolio-item-detail, .portfolio-item:active .portfolio-item-detail {
   opacity: 1;
@@ -254,7 +256,7 @@ section {
 .contact {
   width: 100vw;
   max-width: 800px;
-  padding: 0 12px;
+  padding: 12px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.4rem;

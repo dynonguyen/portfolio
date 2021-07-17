@@ -215,6 +215,7 @@ $portfolioItemTrans: all 0.5s;
       background-color: #222;
       transition: $portfolioItemTrans;
       opacity: 0;
+      visibility: hidden;
       z-index: 1;
     }
 
@@ -233,6 +234,7 @@ $portfolioItemTrans: all 0.5s;
 
       &::before {
         opacity: 0.55;
+        visibility: visible;
       }
 
       & .portfolio-item-detail {
@@ -296,7 +298,7 @@ $portfolioItemTrans: all 0.5s;
 .contact {
   width: 100vw;
   max-width: $max-width;
-  padding: 0 12px;
+  padding: 12px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.4rem;

@@ -32,7 +32,7 @@ const NAV_LIST = [
 
 const LINK_KEY = 'data-link';
 
-let currentLink = NAV_LINKS.PORTFOLIO;
+let currentLink = NAV_LINKS.HOME;
 
 // get initial component
 function getComponent(link = NAV_LINKS.HOME) {

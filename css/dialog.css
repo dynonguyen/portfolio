@@ -12,6 +12,7 @@
 
 #projectDialog {
   display: none;
+  z-index: 9999;
 }
 
 .dialog {
@@ -36,6 +37,7 @@
   font-size: 2.2rem;
   color: var(--text-color);
   font-weight: 500;
+  margin-right: 8px;
 }
 
 .dialog-header {
