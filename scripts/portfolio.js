@@ -35,92 +35,22 @@ const PROJECTS = [
 	{
 		id: '0',
 		key: 'pet-project',
-		img: 'https://picsum.photos/350/350',
+		img: '../assets/projects/dynonary.png',
 		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: 'https://www.youtube.com/watch?v=KRMWzbuh-Vw',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
+		projectTech: 'ReactJS, MUI, Redux Toolkit, RESTFul API, MERN Stack',
+		video: null,
+		github: 'https://github.com/TuanNguyen2504/dynonary-english',
 		liveDemo: 'https://dynonary.herokuapp.com',
 	},
 	{
 		id: '1',
 		key: 'pet-project',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: 'https://www.youtube.com/watch?v=KRMWzbuh-Vw',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: 'https://dynonary.herokuapp.com',
-	},
-	{
-		id: '2',
-		key: 'pet-project',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: 'https://www.youtube.com/watch?v=KRMWzbuh-Vw',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: 'https://dynonary.herokuapp.com',
-	},
-	{
-		id: '3',
-		key: 'pet-project',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: 'https://www.youtube.com/watch?v=KRMWzbuh-Vw',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: 'https://dynonary.herokuapp.com',
-	},
-	{
-		id: '3',
-		key: 'learning',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: null,
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: 'https://dynonary.herokuapp.com',
-	},
-	{
-		id: '4',
-		key: 'learning',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: null,
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: null,
-	},
-	{
-		id: '5',
-		key: 'sharing',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: '',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: null,
-	},
-	{
-		id: '6',
-		key: 'others',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: '',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: null,
-	},
-	{
-		id: '7',
-		key: 'others',
-		img: 'https://picsum.photos/350/350',
-		projectName: 'Dynonary',
-		projectTech: 'ReactJS, MUI, ExpressJS, RESTFul API',
-		video: '',
-		github: 'https://github.com/TuanNguyen2504/portfolio',
-		liveDemo: null,
+		img: '../assets/projects/ttb-store.png',
+		projectName: 'TTB Store',
+		projectTech: 'ReactJS, AntDesign UI, Redux, Webpack, MERN Stack',
+		video: 'https://youtu.be/BVx8BPW-ySs',
+		github: 'https://github.com/TuanNguyen2504/ttb-store-project',
+		liveDemo: 'https://ttbstorevn.web.app',
 	},
 ];
 
@@ -131,214 +61,52 @@ const PROJECTS_DETAILS = [
 		contentList: [
 			{
 				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
+				content: `With the desire to improve my English ability and everyone else's but not cause boredom. By my website knowledge, I create Dynonary.`,
 			},
 			{
 				label: 'Created',
-				content: '19-05-2020',
+				content: '12-06-2021',
+			},
+			{
+				label: 'Status',
+				content: 'Developing',
 			},
 			{
 				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
+				content: 'ReactJS, Material UI, Redux, Redux Toolkit, Axios, SCSS',
+			},
+			{
+				label: 'Backend Technologies',
+				content: 'NodeJS, ExpressJS, Mongoose.js, MongoDB, Jwt',
 			},
 			{
 				label: 'Team size',
-				content: '5',
+				content: '1',
 			},
 			{
-				label: 'Link Demo:',
-				content: 'https://picsum.photos/200/200',
+				label: 'Source Code',
+				content: 'https://github.com/TuanNguyen2504/dynonary-english',
 				isLink: true,
+			},
+			{
+				label: 'Live Demo:',
+				content: 'https://dynonary.herokuapp.com',
+				isLink: true,
+			},
+		],
+		features: [
+			{
+				name: '',
+				isDone: true,
 			},
 		],
 	},
 	{
 		id: '1',
-		title: 'Dynonary - Website For Learning English',
+		title: 'TTB Store - Ecommerce Website',
 		contentList: [
 			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
-			},
-		],
-	},
-	{
-		id: '2',
-		title: 'Dynonary - Website For Learning English',
-		contentList: [
-			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
-			},
-		],
-	},
-	{
-		id: '3',
-		title: 'Dynonary - Website For Learning English',
-		contentList: [
-			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
-			},
-		],
-	},
-	{
-		id: '4',
-		title: 'Dynonary - Website For Learning English',
-		contentList: [
-			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
-			},
-		],
-	},
-	{
-		id: '5',
-		title: 'Dynonary - Website For Learning English',
-		contentList: [
-			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
-			},
-		],
-	},
-	{
-		id: '6',
-		title: 'Dynonary - Website For Learning English',
-		contentList: [
-			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
-			},
-		],
-	},
-	{
-		id: '7',
-		title: 'Dynonary - Website For Learning English',
-		contentList: [
-			{
-				label: 'Description',
-				content:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde',
-			},
-			{
-				label: 'Created',
-				content: '19-05-2020',
-			},
-			{
-				label: 'Frontend Technologies',
-				content: 'ReactJS, MUI, JS',
-			},
-			{
-				label: 'Team size',
-				content: '5',
-			},
-			{
-				label: 'Link Demo:',
-				content: 'Frontend Dev, Leader',
+				label: '',
 			},
 		],
 	},
@@ -429,7 +197,7 @@ function showProjectDetailDialog(id = '') {
 </li>`;
 	});
 
-	$('#projectDialogTitle').text(title);
+	$('#projectDiaglogTitle').text(title);
 	$('#projectDialogContent').html(xml);
 	$('#overlay').show(250);
 	$('#projectDialog').show(250);

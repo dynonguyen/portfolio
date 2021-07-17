@@ -214,7 +214,8 @@ section {
 .portfolio-item-detail {
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 1.4rem;
+  text-align: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -238,6 +239,7 @@ section {
   color: #fcfcfc;
   font-size: 1.6rem;
   margin: 1.8rem 0;
+  line-height: 1.25;
 }
 .project-icon {
   font-size: 2.8rem;
