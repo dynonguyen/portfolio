@@ -422,7 +422,7 @@ function showProjectDetailDialog(id = '') {
 	<span class="content">
 		${
 			item.isLink
-				? `<a href="${item.content}" target="_blank">${item.content}</a>`
+				? `<a class="link" href="${item.content}" target="_blank">${item.content}</a>`
 				: item.content
 		}
 	</span>

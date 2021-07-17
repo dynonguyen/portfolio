@@ -98,7 +98,7 @@ section {
   margin: 1.2rem 0;
   text-transform: capitalize;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .about-content {
@@ -247,6 +247,49 @@ section {
 }
 .project-icon:hover, .project-icon:active {
   transform: scale(1.15);
+}
+
+.contact {
+  width: 100vw;
+  max-width: 800px;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.4rem;
+  text-align: center;
+}
+.contact .label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+.contact .content {
+  font-size: 1.6rem;
+  color: var(--text-color-sec);
+}
+.contact .link {
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.contact-avt {
+  width: 100%;
+}
+.contact-avt img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+  margin-right: 6px;
+}
+
+.contact-info-item,
+.contact-social-network li {
+  margin: 1rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

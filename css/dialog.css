@@ -1,10 +1,10 @@
 #overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: #000;
   opacity: 0.35;
   z-index: 1;
@@ -15,7 +15,7 @@
 }
 
 .dialog {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@
 .dialog-header i {
   font-size: 2.4rem;
   color: var(--text-color);
-  transition: all 0.3s ease;
+  transition: all 0.5s;
 }
 .dialog-header i:hover, .dialog-header i:active {
   transform: rotate(360deg);

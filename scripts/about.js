@@ -3,7 +3,7 @@
 const INTRODUCES = [
 	"🤵 I'm a Computer Science and Engineering Student (Information System) at the HCMUS.",
 	'👨‍💻 I’m currently working on web development technologies like JavaScript, React, MERN Stack etc.',
-	'🎯 Future Goals: Learn more technologies Learning to become a full-stack developer.',
+	'🎯 Future Goals: Learn more technologies. Learning to become a full-stack developer.',
 	'⚡ Fun fact: Open and friendly, I love to play guitar & code.',
 ];
 

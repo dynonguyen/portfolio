@@ -5,7 +5,6 @@ const NAV_LINKS = {
 	ABOUT: 'about',
 	PORTFOLIO: 'portfolio',
 	CONTACT: 'contact',
-	CV: 'cv',
 };
 
 const NAV_LIST = [
@@ -29,19 +28,15 @@ const NAV_LIST = [
 		iconClass: 'fas fa-envelope',
 		label: 'Contact',
 	},
-	{
-		link: NAV_LINKS.CV,
-		iconClass: 'fas fa-file-contract',
-		label: 'My CV',
-	},
 ];
 
 const LINK_KEY = 'data-link';
 
-let currentLink = NAV_LINKS.PORTFOLIO;
+let currentLink = NAV_LINKS.CONTACT;
 
 // get initial component
 function getComponent(link = NAV_LINKS.HOME) {
+	if (!link || link === '') return;
 	// remove current
 	$(`.nav-link[data-link=${currentLink}]`).removeClass('active');
 	$(`.nav-link[data-link=${link}]`).addClass('active');
@@ -63,6 +58,9 @@ function renderNavigation() {
 		desktopXml += `<li class="nav-link" ${LINK_KEY}="${item.link}">${item.label}</li>`;
 	});
 
+	mobileXml += `<li class="nav-link" ${LINK_KEY}=""><a href="/portfolio/assets/CV_DynoNguyen.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a></li>`;
+	desktopXml += `<li class="nav-link" ${LINK_KEY}=""><a href="/portfolio/assets/CV_DynoNguyen.pdf" target="_blank">My CV</a></li>`;
+
 	$('#mobileNavLinks').html(mobileXml);
 	$('#desktopNavLinks').html(desktopXml);
 }
@@ -76,7 +74,7 @@ $(document).ready(function () {
 
 	// link & render component
 	$('.nav-link').click(function () {
-		const link = $(this).attr('data-link');
+		const link = $(this).attr(LINK_KEY);
 		getComponent(link);
 	});
 });

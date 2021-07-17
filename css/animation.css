@@ -132,56 +132,38 @@
 }
 
 .ani-avt-shape {
-  -webkit-animation: avtShape 8.5s 0.2s infinite;
-  animation: avtShape 8.5s 0.2s infinite;
+  -webkit-animation: avtShape 4.5s 0.5s infinite;
+  animation: avtShape 4.5s 0.5s infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
 }
 
 @-webkit-keyframes avtShape {
   0% {
-    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+    border-radius: 55% 30% 35% 60%/65% 40% 30% 30%;
   }
-  20% {
-    border-radius: 60% 20% 30% 70%;
-  }
-  30% {
-    border-radius: 60% 40% 30% 70%;
-  }
-  50% {
+  40% {
     border-radius: 50%;
   }
-  70% {
-    border-radius: 60% 30% 70% 40%;
-  }
   80% {
-    border-radius: 60% 40% 28% 72%/60% 20% 60% 40%;
+    border-radius: 30% 50% 35% 55%/40% 50% 50% 65%;
   }
   100% {
-    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+    border-radius: 55% 30% 35% 60%/65% 40% 30% 30%;
   }
 }
 @keyframes avtShape {
   0% {
-    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
-  }
-  20% {
-    border-radius: 60% 20% 30% 70%;
+    border-radius: 55% 30% 35% 60%/65% 40% 30% 30%;
   }
   40% {
-    border-radius: 60% 40% 30% 70%;
-  }
-  50% {
     border-radius: 50%;
   }
-  60% {
-    border-radius: 60% 30% 70% 40%;
-  }
   80% {
-    border-radius: 60% 40% 28% 72%/60% 20% 60% 40%;
+    border-radius: 30% 50% 35% 55%/40% 50% 50% 65%;
   }
   100% {
-    border-radius: 60% 20% 30% 70%/60% 10% 70% 40%;
+    border-radius: 55% 30% 35% 60%/65% 40% 30% 30%;
   }
 }
 
