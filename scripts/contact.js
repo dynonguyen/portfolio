@@ -68,6 +68,12 @@ const CONTACT_SOCIAL_NETWORKS = [
 		link: 'https://www.instagram.com/_dyno.nguyen__/',
 		iconClass: 'fab fa-instagram-square',
 	},
+	{
+		label: 'My Blog',
+		content: 'Dyno Nguyễn Blog',
+		link: 'https://dynonguyen.com',
+		iconClass: 'fas fa-blog',
+	},
 ];
 
 function renderContactInfos() {

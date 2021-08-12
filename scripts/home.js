@@ -21,6 +21,10 @@ const SOCIAL_LIST = [
 		link: 'https://www.instagram.com/_dyno.nguyen__/',
 		iconClass: 'fab fa-instagram-square',
 	},
+	{
+		link: 'https://dynonguyen.com',
+		iconClass: 'fas fa-blog',
+	},
 ];
 
 $(document).ready(function () {
