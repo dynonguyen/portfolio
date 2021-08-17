@@ -38,7 +38,7 @@ const PROJECTS = [
 		img: './assets/projects/dynonary.png',
 		projectName: 'Dynonary',
 		projectTech: 'ReactJS, MUI, Redux Toolkit, RESTFul API, MERN Stack',
-		video: null,
+		video: 'https://youtu.be/GDgMBoqIP0g',
 		github: 'https://github.com/TuanNguyen2504/dynonary-english',
 		liveDemo: 'https://dynonary.herokuapp.com',
 	},
