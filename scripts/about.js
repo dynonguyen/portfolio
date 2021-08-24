@@ -11,7 +11,7 @@ const SKILLS = [
 	{
 		label: 'Front-end Technologies',
 		content:
-			'ReactJS, Next.js, HTML5, CSS3, Scss, Styled component, Redux,Redux Saga, Jquery.',
+			'ReactJS, Next.js, HTML5, CSS3, Scss, Styled component, Redux, Jquery.',
 	},
 	{
 		label: 'Back-end Technologies',
@@ -20,7 +20,7 @@ const SKILLS = [
 	},
 	{
 		label: 'Development Tools / Teamwork Tools',
-		content: 'Git, Github, Github Project, Slack, Trello, VSCode, Notion.',
+		content: 'Git, Github, Slack, Trello, VSCode, Notion.',
 	},
 	{
 		label: 'Others',
