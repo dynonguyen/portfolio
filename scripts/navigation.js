@@ -58,8 +58,8 @@ function renderNavigation() {
 		desktopXml += `<li class="nav-link" ${LINK_KEY}="${item.link}">${item.label}</li>`;
 	});
 
-	mobileXml += `<li class="nav-link" ${LINK_KEY}=""><a href="/portfolio/assets/CV_DynoNguyen.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a></li>`;
-	desktopXml += `<li class="nav-link" ${LINK_KEY}=""><a href="/portfolio/assets/CV_DynoNguyen.pdf" target="_blank">My CV</a></li>`;
+	mobileXml += `<li class="nav-link" ${LINK_KEY}=""><a href="/assets/CV_DynoNguyen.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a></li>`;
+	desktopXml += `<li class="nav-link" ${LINK_KEY}=""><a href="/assets/CV_DynoNguyen.pdf" target="_blank">My CV</a></li>`;
 
 	$('#mobileNavLinks').html(mobileXml);
 	$('#desktopNavLinks').html(desktopXml);

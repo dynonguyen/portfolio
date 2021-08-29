@@ -100,7 +100,7 @@ function renderSocialNetworks() {
 	xml += `<li>
 	<i class="fas fa-download contact-icon"></i>
 	<span class="label">Download My CV:&nbsp;&nbsp;</span>
-	<a href="/portfolio/assets/CV_DynoNguyen.pdf" download="CV_DynoNguyen.pdf" class="link content">Link</a>
+	<a href="/assets/CV_DynoNguyen.pdf" download="CV_DynoNguyen.pdf" class="link content">Link</a>
 </li>`;
 
 	$('#contactSocialNetwork').html(xml);
