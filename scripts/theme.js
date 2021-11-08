@@ -1,5 +1,3 @@
-/// <reference path="D:\tips\typings\jquery\globals\jquery\index.d.ts" />
-
 const LS_THEME_KEY = 'theme';
 
 // get theme in local storage

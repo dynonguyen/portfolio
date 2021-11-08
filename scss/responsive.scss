@@ -49,16 +49,16 @@
     font-size: 1.5rem;
   }
 
+  #aboutSkill {
+    text-align: right;
+  }
+
   // ----------- portfolio -------------
   .portfolio {
     &-header {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-    }
-
-    &-list {
-      grid-template-columns: 1fr 1fr;
     }
   }
 

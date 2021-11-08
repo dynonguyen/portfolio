@@ -37,13 +37,14 @@
     font-size: 1.5rem;
   }
 
+  #aboutSkill {
+    text-align: right;
+  }
+
   .portfolio-header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-  .portfolio-list {
-    grid-template-columns: 1fr 1fr;
   }
 
   .contact {

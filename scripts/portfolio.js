@@ -1,5 +1,3 @@
-/// <reference path="D:\tips\typings\jquery\globals\jquery\index.d.ts" />
-
 const DATA_KEY = 'data-key';
 const DETAIL_KEY = 'data-id';
 
@@ -35,7 +33,7 @@ const PROJECTS = [
 	{
 		id: '0',
 		key: 'mern',
-		img: './assets/projects/dynonary.png',
+		img: './assets/projects/dynonary.jpg',
 		projectName: 'Dynonary',
 		projectTech: 'ReactJS, MUI, Redux Toolkit, RESTFul API, MERN Stack',
 		video: 'https://youtu.be/GDgMBoqIP0g',
@@ -45,7 +43,7 @@ const PROJECTS = [
 	{
 		id: '1',
 		key: 'mern',
-		img: './assets/projects/ttb-store.png',
+		img: './assets/projects/ttb-store.jpg',
 		projectName: 'TTB Store',
 		projectTech: 'ReactJS, AntDesign UI, Redux, Webpack, MERN Stack',
 		video: 'https://www.youtube.com/watch?v=upOjXvfoWqE',
@@ -55,7 +53,7 @@ const PROJECTS = [
 	{
 		id: '3',
 		key: 'sharing',
-		img: './assets/projects/dyno-visualizer.png',
+		img: './assets/projects/dyno-visualizer.jpg',
 		projectName: 'Dyno Visualizer',
 		projectTech: 'Algorithms and Data structures, JQuery, SCSS',
 		video: null,
@@ -65,7 +63,7 @@ const PROJECTS = [
 	{
 		id: '4',
 		key: 'sharing',
-		img: './assets/projects/js-tips.jpeg',
+		img: './assets/projects/js-tips.jpg',
 		projectName: 'JavaScript Tips',
 		projectTech: 'JavaScript, Markdown',
 		video: null,
@@ -75,17 +73,18 @@ const PROJECTS = [
 	{
 		id: '5',
 		key: 'sharing',
-		img: './assets/projects/vscode-tips.png',
-		projectName: 'Visual Code Tips',
-		projectTech: 'Markdown, Visual Code',
+		img: './assets/projects/coding-tool.jpg',
+		projectName: 'Coding Tool Settings',
+		projectTech:
+			'Visual Studio Code, Vim - NeoVim, Windows Terminal, Powershell',
 		video: null,
-		github: 'https://github.com/TuanNguyen2504/vscode-tips',
+		github: 'https://github.com/TuanNguyen2504/coding-tool-config',
 		liveDemo: null,
 	},
 	{
 		id: '6',
 		key: 'learning',
-		img: './assets/projects/natuspa.png',
+		img: './assets/projects/natuspa.jpg',
 		projectName: 'NATUSPA Static Website',
 		projectTech: 'HTML, CSS, Jquery',
 		video: null,
@@ -95,7 +94,7 @@ const PROJECTS = [
 	{
 		id: '7',
 		key: 'mern',
-		img: './assets/projects/real-estate.png',
+		img: './assets/projects/real-estate.jpg',
 		projectName: 'Real Estate Website',
 		projectTech: 'ReactJS, Ant Design UI, ExpressJS, MongoDB',
 		video: 'https://youtu.be/AVXS7Yf_HE0',
@@ -105,7 +104,7 @@ const PROJECTS = [
 	{
 		id: '8',
 		key: 'learning',
-		img: './assets/projects/task-management.png',
+		img: './assets/projects/task-management.jpg',
 		projectName: 'Task Management',
 		projectTech: 'ReactJS',
 		video: null,
@@ -115,7 +114,7 @@ const PROJECTS = [
 	{
 		id: '9',
 		key: 'learning',
-		img: './assets/projects/smash-brick-game.png',
+		img: './assets/projects/smash-brick-game.jpg',
 		projectName: 'Smash Bricks Game',
 		projectTech: 'JavaScript, HTML5 Canvas',
 		video: null,
@@ -125,7 +124,7 @@ const PROJECTS = [
 	{
 		id: '10',
 		key: 'sharing',
-		img: './assets/projects/fireworks.png',
+		img: './assets/projects/fireworks.jpg',
 		projectName: 'Fireworks App',
 		projectTech: 'JavaScript, HTML5 Canvas',
 		video: null,
@@ -135,7 +134,7 @@ const PROJECTS = [
 	{
 		id: '11',
 		key: 'mern',
-		img: './assets/projects/defast.png',
+		img: './assets/projects/defast.jpg',
 		projectName: 'Defast - Delivery Hub',
 		projectTech: 'ReactJS, ExpressJS, MongoDB, MERN Stack',
 		video: 'https://youtu.be/eS7BDvPh0ug',
@@ -145,7 +144,7 @@ const PROJECTS = [
 	{
 		id: '12',
 		key: 'others',
-		img: './assets/projects/huffman.png',
+		img: './assets/projects/huffman.jpg',
 		projectName: 'Winzip',
 		projectTech: 'C/C++, Algorithm',
 		video: 'https://www.youtube.com/watch?v=xPKw52xddXQ',
@@ -155,7 +154,7 @@ const PROJECTS = [
 	{
 		id: '13',
 		key: 'others',
-		img: './assets/projects/chrome-extensions.png',
+		img: './assets/projects/chrome-extensions.jpg',
 		projectName: 'Chrome Extension',
 		projectTech: 'JavaScript, Chrome API',
 		video: null,
@@ -178,17 +177,21 @@ const PROJECTS_DETAILS = [
 				content: '12-06-2021',
 			},
 			{
+				label: 'Completed',
+				content: '17-08-2021',
+			},
+			{
 				label: 'Features',
 				content:
 					'Sign up, Sign in, Login with Google & Facebook, Account Setting, Search Word, Learn IPA, Flashcard, Dictionary, Play Game, Contribute, Learn Grammar ...',
 			},
 			{
 				label: 'Status',
-				content: 'Developing',
+				content: 'Done',
 			},
 			{
 				label: 'Frontend Technologies',
-				content: 'ReactJS, Material UI, Redux, Redux Toolkit, Axios, SCSS, ...',
+				content: 'ReactJS, Material UI, Redux, Redux Toolkit, Axios, SCSS',
 			},
 			{
 				label: 'Backend Technologies',
@@ -208,6 +211,11 @@ const PROJECTS_DETAILS = [
 				content: 'https://dynonary.herokuapp.com',
 				isLink: true,
 			},
+			{
+				label: 'Video Demo',
+				content: 'https://www.youtube.com/watch?v=GDgMBoqIP0g',
+				isLink: true,
+			},
 		],
 	},
 	{
@@ -222,6 +230,10 @@ const PROJECTS_DETAILS = [
 			{
 				label: 'Created',
 				content: '06-11-2020',
+			},
+			{
+				label: 'Completed',
+				content: '27-01-2020',
 			},
 			{
 				label: 'Feature',
@@ -288,7 +300,7 @@ const PROJECTS_DETAILS = [
 			},
 			{
 				label: 'Status',
-				content: 'Developing',
+				content: 'Done',
 			},
 			{
 				label: 'Web Technologies',
@@ -375,6 +387,10 @@ const PROJECTS_DETAILS = [
 				content: '04-02-2020',
 			},
 			{
+				label: 'Completed',
+				content: '18-02-2020',
+			},
+			{
 				label: 'Status',
 				content: 'Done',
 			},
@@ -406,6 +422,10 @@ const PROJECTS_DETAILS = [
 			{
 				label: 'Created',
 				content: '18-12-2020',
+			},
+			{
+				label: 'Completed',
+				content: '24-12-2020',
 			},
 			{
 				label: 'Feature',
@@ -447,6 +467,10 @@ const PROJECTS_DETAILS = [
 			{
 				label: 'Created',
 				content: '04-03-2020',
+			},
+			{
+				label: 'Completed',
+				content: '10-03-2020',
 			},
 			{
 				label: 'Feature',
@@ -550,6 +574,10 @@ const PROJECTS_DETAILS = [
 				content: '01-05-2021',
 			},
 			{
+				label: 'Completed',
+				content: '09-06-2021',
+			},
+			{
 				label: 'Feature',
 				content:
 					'Order, Customer administrator, Delivery Company administrator, Payment with Paypal Sandbox',
@@ -641,11 +669,11 @@ const PROJECTS_DETAILS = [
 			},
 			{
 				label: 'Feature',
-				content: 'Highlight Extension',
+				content: 'Highlight Extension, Auto open tab, Auto fill credit card',
 			},
 			{
 				label: 'Status',
-				content: 'Developing',
+				content: 'Done',
 			},
 			{
 				label: 'Technologies',

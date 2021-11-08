@@ -1,5 +1,3 @@
-/// <reference path="D:\tips\typings\jquery\globals\jquery\index.d.ts" />
-
 const NAV_LINKS = {
 	HOME: 'home',
 	ABOUT: 'about',
