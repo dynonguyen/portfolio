@@ -17,7 +17,7 @@ const CONTACT_INFOS = [
 	},
 	{
 		label: 'Study',
-		content: 'Senior student at VNU - University Of Science HCM City (HCMUS)',
+		content: 'VNU - University Of Science HCM City (HCMUS)',
 	},
 	{
 		label: 'Major',
@@ -76,7 +76,7 @@ const CONTACT_SOCIAL_NETWORKS = [
 
 function renderContactInfos() {
 	let xml = '';
-	CONTACT_INFOS.forEach((item) => {
+	CONTACT_INFOS.forEach(item => {
 		xml += `<li class="contact-info-item">
     <span class="label">${item.label}:&nbsp;&nbsp;</span>
     <span class="content">${item.content}</span>
@@ -87,7 +87,7 @@ function renderContactInfos() {
 
 function renderSocialNetworks() {
 	let xml = '';
-	CONTACT_SOCIAL_NETWORKS.forEach((item) => {
+	CONTACT_SOCIAL_NETWORKS.forEach(item => {
 		xml += `<li>
       <i class="${item.iconClass} contact-icon"></i>
       <span class="label">${item.label}:&nbsp;&nbsp;</span>
@@ -98,7 +98,7 @@ function renderSocialNetworks() {
 	xml += `<li>
 	<i class="fas fa-download contact-icon"></i>
 	<span class="label">Download My CV:&nbsp;&nbsp;</span>
-	<a href="/assets/CV_DynoNguyen.pdf" download="CV_DynoNguyen.pdf" class="link content">Link</a>
+	<a href="/assets/CV_NguyenLeAnhTuan.pdf" download="CV_DynoNguyen.pdf" class="link content">Link</a>
 </li>`;
 
 	$('#contactSocialNetwork').html(xml);

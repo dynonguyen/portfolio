@@ -31,6 +31,16 @@ const OPTIONS = [
 
 const PROJECTS = [
 	{
+		id: 'pollme',
+		key: 'mern',
+		img: 'https://res.cloudinary.com/dynonary/image/upload/w_1200,h_630/v1656490408/pollme/pollme_cover.jpg',
+		projectName: 'Pollme',
+		projectTech:
+			'NextJS, GraphQL, Typescript, Apollo Server, Redis, MongoDB, React Recoil',
+		github: 'https://github.com/TuanNguyen2504/pollme',
+		liveDemo: 'https://poll-me.vercel.app',
+	},
+	{
 		id: '0',
 		key: 'mern',
 		img: './assets/projects/dynonary.jpg',
@@ -39,6 +49,15 @@ const PROJECTS = [
 		video: 'https://youtu.be/GDgMBoqIP0g',
 		github: 'https://github.com/TuanNguyen2504/dynonary-english',
 		liveDemo: 'https://dynonary.herokuapp.com',
+	},
+	{
+		id: 'mm',
+		key: 'others',
+		img: './assets/projects/metamarket.jpg',
+		projectName: 'MetaMarket',
+		projectTech:
+			'NodeJS, MoleculerJS, PHP, Microservice, Socket.io, Momo Payment, MySQL, MongoDB',
+		github: 'https://github.com/TuanNguyen2504/metamarket',
 	},
 	{
 		id: '1',
@@ -165,6 +184,58 @@ const PROJECTS = [
 
 const PROJECTS_DETAILS = [
 	{
+		id: 'pollme',
+		title: 'Pollme - Website For Creating Online Survey',
+		contentList: [
+			{
+				label: 'Description',
+				content:
+					'Pollme is an application that allows users to easily create online polls quickly, multi-featured, customized according to requirements.',
+			},
+			{
+				label: 'Created',
+				content: '01-06-2022',
+			},
+			{
+				label: 'Completed',
+				content: '29-06-2022',
+			},
+			{
+				label: 'Features',
+				content:
+					'Easy To Create A Poll. Real-Time Analysis. Simple Interface, Easy To Use',
+			},
+			{
+				label: 'Status',
+				content: 'Done',
+			},
+			{
+				label: 'Frontend Technologies',
+				content:
+					'NextJS, i18n, Typescript, ChartJS, TailwindCSS, Apollo client',
+			},
+			{
+				label: 'Backend Technologies',
+				content:
+					'NodeJS, ExpressJS, GraphQL, Apollo Server, Nodemailer, Web Socket, Type-GraphQL, MongoDB, Redis, JWT',
+			},
+			{
+				label: 'Hosting, Storage',
+				content: 'Heroku, Cloudinary, Vercel, RedisLab, MongoDB Atlas',
+			},
+			{
+				label: 'Source Code',
+				content: 'https://github.com/TuanNguyen2504/pollme',
+				isLink: true,
+			},
+			{
+				label: 'Live Demo:',
+				content: 'https://poll-me.vercel.app/',
+				isLink: true,
+			},
+		],
+	},
+	{
 		id: '0',
 		title: 'Dynonary - Website For Learning English',
 		contentList: [
@@ -214,6 +285,63 @@ const PROJECTS_DETAILS = [
 			{
 				label: 'Video Demo',
 				content: 'https://www.youtube.com/watch?v=GDgMBoqIP0g',
+				isLink: true,
+			},
+		],
+	},
+	{
+		id: 'mm',
+		title: 'MetaMarket - Online Marketplace - Microservice Architecture',
+		contentList: [
+			{
+				label: 'Description',
+				content: 'This is a project of the subject "Distributed Application"',
+			},
+			{
+				label: 'Created',
+				content: '11-3-2020',
+			},
+			{
+				label: 'Completed',
+				content: '',
+			},
+			{
+				label: 'Feature',
+				content:
+					'Show all product, show product details, search, filter product, cart, sign in, sign up, login with GG, Order (Momo payment), Administrator, user account management',
+			},
+			{
+				label: 'Status',
+				content: 'Developing',
+			},
+			{
+				label: 'Frontend Technologies',
+				content: 'HTML, CSS, JS, JQuery, Bootstrap 5',
+			},
+			{
+				label: 'Backend Technologies',
+				content: 'PHP MVC without framework, Apache Server',
+			},
+			{
+				label: 'API Service',
+				content:
+					'Microservice, Moleculer Framework, NodeJS, MongoDB, MySQL, Socket.io',
+			},
+			{
+				label: 'Teamwork Tools',
+				content: 'Slack, Github, Docker',
+			},
+			{
+				label: 'Team Size',
+				content: '4',
+			},
+			{
+				label: 'Role',
+				content: 'Leader, Coder',
+			},
+			{
+				label: 'Source Code',
+				content: 'https://github.com/TuanNguyen2504/metamarket',
 				isLink: true,
 			},
 		],
@@ -325,7 +453,7 @@ const PROJECTS_DETAILS = [
 			{
 				label: 'Description',
 				content:
-					'This is a collection of JavaScript (ES6+) tips and tricks. Make the code neater. And it seems to be well received by everyone with 91 stars and 39 forks.',
+					'This is a collection of JavaScript (ES6+) tips and tricks. Make the code neater. And it seems to be well received by everyone with 134 stars and 70 forks.',
 			},
 			{
 				label: 'Created',
@@ -693,7 +821,7 @@ let currentOptionKey = OPTIONS[0].key;
 function renderOptions() {
 	let xml = '';
 
-	OPTIONS.forEach((item) => {
+	OPTIONS.forEach(item => {
 		xml += `<li ${DATA_KEY}="${item.key}" class="portfolio-menu-option ${
 			item.key === currentOptionKey ? 'active' : ''
 		}">${item.label}</li>`;
@@ -704,7 +832,7 @@ function renderOptions() {
 
 function renderProject(projects = []) {
 	let xml = '';
-	projects.forEach((project) => {
+	projects.forEach(project => {
 		const { id, key, img, projectName, projectTech, video, github, liveDemo } =
 			project;
 
@@ -754,13 +882,13 @@ function renderProject(projects = []) {
 function showProjectDetailDialog(id = '') {
 	if (!id || id === '') return;
 
-	const project = PROJECTS_DETAILS.find((i) => i.id === id);
+	const project = PROJECTS_DETAILS.find(i => i.id === id);
 	if (!project) return;
 
 	const { contentList, title } = project;
 
 	let xml = '';
-	contentList.forEach((item) => {
+	contentList.forEach(item => {
 		xml += `<li class="dialog-content-item">
 	<span class="label">${item.label}:&nbsp;</span>
 	<span class="content">
@@ -786,8 +914,6 @@ function showProjectDetailDialog(id = '') {
 
 $(document).ready(function () {
 	renderOptions();
-
-	// render init all projects
 	renderProject(PROJECTS);
 
 	// filter project
@@ -802,14 +928,14 @@ $(document).ready(function () {
 		$(this).addClass('active');
 
 		// change menu title
-		const newLabel = OPTIONS.find((i) => i.key === currentOptionKey).title;
+		const newLabel = OPTIONS.find(i => i.key === currentOptionKey).title;
 		$('#portfolioMenuLabel').text(newLabel);
 
 		// filter
 		if (currentOptionKey === 'all') {
 			renderProject(PROJECTS);
 		} else {
-			const filtered = PROJECTS.filter((i) => i.key === currentOptionKey);
+			const filtered = PROJECTS.filter(i => i.key === currentOptionKey);
 			renderProject(filtered);
 		}
 	});
