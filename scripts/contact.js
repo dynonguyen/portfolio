@@ -32,7 +32,7 @@ const CONTACT_INFOS = [
 const CONTACT_SOCIAL_NETWORKS = [
 	{
 		label: 'Phone',
-		content: '(+84) 377757578',
+		content: '(+84) 978725040',
 		link: '#',
 		iconClass: 'fas fa-phone-square-alt',
 	},
